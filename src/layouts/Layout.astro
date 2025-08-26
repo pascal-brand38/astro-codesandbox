@@ -31,3 +31,16 @@ const { title } = Astro.props
 		height: 100%;
 	}
 </style>
+
+
+<!-- Google tag (gtag.js) -->
+<script is:inline src="https://www.googletagmanager.com/gtag/js?id=G-YSMCFS02D4"></script>
+<script is:inline>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'G-YSMCFS02D4');
+</script>
