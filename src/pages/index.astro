@@ -4,9 +4,11 @@
 //
 
 import { Swiper, SwiperWrapper, SwiperSlide, SwiperPagination } from "astro-swiper";
-
+import Layout from "../layouts/Layout.astro";
 ---
 
+
+<Layout title="Astro-Swiper Demo">
 <button> <a href='#' > astro-swiper on github </a> </button>
 <button> astro-swiper doc </button>
 
@@ -42,6 +44,7 @@ import { Swiper, SwiperWrapper, SwiperSlide, SwiperPagination } from "astro-swip
 
   <SwiperPagination />
 </Swiper>
+</Layout>
 
 <style>
 .my-swiper .swiper-slide {
