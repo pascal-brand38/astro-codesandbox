@@ -1,19 +1,55 @@
 ---
 // Copyright (c) Pascal Brand
 // MIT License
+//
+
+import { Swiper, SwiperWrapper, SwiperSlide, SwiperPagination } from "astro-swiper";
 
 ---
 
-<h1>Demo file</h1>
+<Swiper
+  uniqueClass="my-swiper"
+  options={{
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  }}
+>
+  <SwiperWrapper>
+    <SwiperSlide> <img src="https://swiperjs.com/demos/images/nature-1.jpg" />  </SwiperSlide>
+    <SwiperSlide> <img src="https://swiperjs.com/demos/images/nature-2.jpg" />  </SwiperSlide>
+    <SwiperSlide> <img src="https://swiperjs.com/demos/images/nature-3.jpg" />  </SwiperSlide>
+    <SwiperSlide> <img src="https://swiperjs.com/demos/images/nature-4.jpg" />  </SwiperSlide>
+    <SwiperSlide> <img src="https://swiperjs.com/demos/images/nature-5.jpg" />  </SwiperSlide>
+    <SwiperSlide> <img src="https://swiperjs.com/demos/images/nature-6.jpg" />  </SwiperSlide>
+    <SwiperSlide> <img src="https://swiperjs.com/demos/images/nature-7.jpg" />  </SwiperSlide>
+  </SwiperWrapper>
 
-<ul>
-  <li>
-    Update this file in a dedicated branch, such as astro-swiper-coverflow.
-    It will contain the demo.
-  </li>
-  <li>
-    Update the Readme of the main branch, with a link to the demo,
-    such as
-    https://codesandbox.io/p/sandbox/github/pascal-brand38/astro-codesandbox/tree/astro-swiper-coverflow?file=/src/components/Demo.astro
-  </li>
-</ul>
+  <SwiperPagination />
+</Swiper>
+
+<style>
+.my-swiper .swiper-slide {
+  width: 50%;
+  height: 90vh;
+}
+
+.my-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+</style>
