@@ -4,8 +4,9 @@
 
 interface Props {
 	packageName: string,   // astro-swiper,  astro-splide...
+  codeSandboxBranch: string,    // branch on codesandbox, such as astro-swiper-coverflow
 }
-const { packageName } = Astro.props
+const { packageName, codeSandboxBranch } = Astro.props
 
 ---
 
@@ -17,6 +18,12 @@ const { packageName } = Astro.props
 
 <button>
   <a href=`https://pascal-brand38.github.io/astro-dev/packages/${packageName}`>
+    {packageName} doc
+  </a>
+</button>
+
+<button>
+  <a href=`https://github.com/pascal-brand38/astro-codesandbox/blob/${codeSandboxBranch}/src/components/Demo.astro`>
     {packageName} doc
   </a>
 </button>
