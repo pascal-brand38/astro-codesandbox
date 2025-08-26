@@ -1,0 +1,22 @@
+---
+// Copyright (c) Pascal Brand
+// MIT License
+
+interface Props {
+	packageName: string,   // astro-swiper,  astro-splide...
+}
+const { packageName } = Astro.props
+
+---
+
+<button>
+  <a href=`https://github.com/pascal-brand38/${packageName}`>
+    {packageName} on github
+  </a>
+</button>
+
+<button>
+  <a href=`https://pascal-brand38.github.io/astro-dev/packages/${packageName}`>
+    {packageName} doc
+  </a>
+</button>
