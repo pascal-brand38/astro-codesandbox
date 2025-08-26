@@ -11,19 +11,19 @@ const { packageName, codeSandboxBranch } = Astro.props
 ---
 
 <button>
-  <a href=`https://github.com/pascal-brand38/${packageName}`>
+  <a href=`https://github.com/pascal-brand38/${packageName}` target="_blank">
     {packageName} on github
   </a>
 </button>
 
 <button>
-  <a href=`https://pascal-brand38.github.io/astro-dev/packages/${packageName}`>
+  <a href=`https://pascal-brand38.github.io/astro-dev/packages/${packageName}` target="_blank">
     {packageName} doc
   </a>
 </button>
 
 <button>
-  <a href=`https://github.com/pascal-brand38/astro-codesandbox/blob/${codeSandboxBranch}/src/components/Demo.astro`>
-    {packageName} doc
+  <a href=`https://github.com/pascal-brand38/astro-codesandbox/blob/${codeSandboxBranch}/src/components/Demo.astro` target="_blank">
+    demo code on github
   </a>
 </button>
