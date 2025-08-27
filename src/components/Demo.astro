@@ -1,19 +1,42 @@
 ---
 // Copyright (c) Pascal Brand
 // MIT License
+//
+
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
 
 ---
 
-<h1>Demo file</h1>
+<Swiper
+  options={{    // check options at https://swiperjs.com/swiper-api
+    autoplay: {
+      delay: 700,
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
+    loop: true,
+  }}>
+  <SwiperWrapper>
+    <!-- Slides -->
+    <SwiperSlide>
+      <img src="https://picsum.photos/455/256?nb=1" alt="" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://picsum.photos/455/256?nb=2" alt="" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <img src="https://picsum.photos/455/256?nb=3" alt="" />
+    </SwiperSlide>
+  </SwiperWrapper>
+</Swiper>
 
-<ul>
-  <li>
-    Update this file in a dedicated branch, such as astro-swiper-coverflow.
-    It will contain the demo.
-  </li>
-  <li>
-    Update the Readme of the main branch, with a link to the demo,
-    such as
-    https://codesandbox.io/p/sandbox/github/pascal-brand38/astro-codesandbox/tree/astro-swiper-coverflow?file=/src/components/Demo.astro
-  </li>
-</ul>
+<style>
+  .swiper {
+    max-width: 455px;
+    aspect-ratio: 16/9;
+  }
+
+  img {
+    width: 100%;
+  }
+</style>
